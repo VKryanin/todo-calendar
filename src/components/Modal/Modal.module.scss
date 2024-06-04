@@ -1,0 +1,61 @@
+.modal {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  // transform: translate(50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  overflow-y: auto;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+
+  visibility: hidden;
+
+  &Open {
+    opacity: 1;
+    visibility: visible;
+    z-index: 99;
+  }
+
+  &Content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 550px;
+    max-width: 40rem;
+    padding: 60px 20px;
+    background-color: #fff;
+    border-radius: 30px;
+    filter: drop-shadow(0 0 10px rgba(255, 103, 0, 0.7));
+    transform: translateY(-50px);
+    transition: transform 0.3s ease-in-out;
+    opacity: 0;
+
+    &Open {
+      opacity: 1;
+      transform: translateY(50px);
+    }
+  }
+
+  &Close {
+    position: absolute;
+    top: 20px;
+    right: 26px;
+    width: 30px;
+    height: 30px;
+
+    transition: opacity 0.3s ease-in-out;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

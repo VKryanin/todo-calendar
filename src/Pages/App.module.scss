@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "aside ."
+    "aside calendar";
+  row-gap: 10px;
+  column-gap: 16px;
+  grid-template-columns: 350px 1fr;
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  max-width: 800px;
+}

@@ -1,0 +1,14 @@
+.aside {
+  grid-area: aside;
+  filter: drop-shadow(0 0 10px rgba(22, 119, 225, 0.7));
+  z-index: 1;
+
+  &Title {
+    display: flex;
+
+    & h2 {
+      margin: 0;
+      margin-right: 24px;
+    }
+  }
+}
